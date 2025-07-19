@@ -49,7 +49,7 @@ class RealtorScraper:
         logging.info(f'Starting scraper for ZIP code: {self.zipcode}')
 
         try:
-            while True:
+            while self.page <= 5:
                 if not self.load_page():
                     break
                 self.scrape_data()
